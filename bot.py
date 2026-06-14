@@ -143,7 +143,7 @@ def get_report_message():
 # ========== BOT HANDLERS ==========
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = update.effective_user.id
-    if not db.is_approved(user_id):
+    if user_id not in ADMIN_IDS and not db.is_approved(user_id):
         await update.message.reply_text(
             "❌ *Access Denied*\n\n"
             "You are not approved to use this bot.\n"
