@@ -168,7 +168,7 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await query.answer()
     user_id = query.from_user.id
     
-    if not db.is_approved(user_id):
+    if user_id not in ADMIN_IDS and not db.is_approved(user_id):
         await query.edit_message_text("❌ You are not approved to use this bot.")
         return
     
