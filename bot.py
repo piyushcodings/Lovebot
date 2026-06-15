@@ -525,5 +525,5 @@ class MassReporterBot:
         await self.bot.run_until_disconnected()
 
 if __name__ == '__main__':
-    bot = MassReporterBot()
+    bot = await MassReporterBot()
     asyncio.run(bot.run())
