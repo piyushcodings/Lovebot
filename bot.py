@@ -71,18 +71,16 @@ class MassReporterBot:
             'bot_session',
             API_ID,
             API_HASH
-        ).start(bot_token=BOT_TOKEN)
-
-        self.active_sessions = []
-        self.report_queue = asyncio.Queue()
-
-        self.setup_handlers()
+        )
 
     async def run(self):
+        await self.bot.start(bot_token=BOT_TOKEN)
+
         asyncio.create_task(self.session_manager())
         asyncio.create_task(self.report_worker())
 
-        # Bot ko alive rakho
+        logger.info("Bot started!")
+
         await self.bot.run_until_disconnected()
     def setup_handlers(self):
         @self.bot.on(events.NewMessage(pattern='/start'))
@@ -528,12 +526,7 @@ class MassReporterBot:
             except:
                 pass
 
-    async def run(self):
-        """Start the bot."""
-        await self.bot.start()
-        logger.info('Bot started!')
-        await self.bot.run_until_disconnected()
-
+    
 if __name__ == '__main__':
     bot = MassReporterBot()
     asyncio.run(bot.run())
