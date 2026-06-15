@@ -28,10 +28,10 @@ from telethon.errors import SessionPasswordNeededError, PhoneCodeInvalidError
 from telethon.network import ConnectionTcpFull, ConnectionTcpMTProxyRandomizedIntermediate
 
 # Configuration
-API_ID = 123456  # Your API ID
-API_HASH = "your_api_hash_here"  # Your API Hash
-BOT_TOKEN = "your_bot_token_here"  # Your Bot Token
-ADMIN_IDS = [123456789]  # List of admin Telegram IDs
+BOT_TOKEN = "8909174731:AAGvm8plRxoZLnBv2R1Z7f7o45FrT3XoXo8"
+API_ID = "23907288"
+API_HASH = "f9a47570ed19aebf8eb0f0a5ec1111e5"
+ADMIN_IDS = [8960582061] # List of admin Telegram IDs
 
 # Logging setup
 logging.basicConfig(
