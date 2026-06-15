@@ -12,11 +12,7 @@ from telethon.tl.types import (
     InputPeerUser,
     InputPeerChannel,
     InputPeerChat,
-    ReportReasonSpam,
-    ReportReasonViolence,
-    ReportReasonPornography,
-    ReportReasonChildAbuse,
-    ReportReasonOther,
+    
     InputReportReasonSpam,
     InputReportReasonViolence,
     InputReportReasonPornography,
